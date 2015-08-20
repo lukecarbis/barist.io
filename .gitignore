@@ -1,6 +1,5 @@
 *.log
-webroot/*.log
-webroot/.htaccess
+.htaccess
 webroot/sitemap.xml
 webroot/sitemap.xml.gz
 webroot/wp-config-local.php
