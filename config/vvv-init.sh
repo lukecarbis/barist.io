@@ -12,13 +12,6 @@ eval $(php -r '
 	}
 ')
 
-printf "DB_NAME: $DB_NAME\n"
-printf "DB_HOST: $DB_HOST\n"
-printf "DB_USER: $DB_USER\n"
-printf "DB_PASSWORD: $DB_PASSWORD\n"
-printf "DB_CHARSET: $DB_CHARSET\n"
-
-
 # Make a database, if we don't already have one
 mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS $DB_NAME CHARACTER SET $DB_CHARSET"
 mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@localhost IDENTIFIED BY '$DB_PASSWORD';"
